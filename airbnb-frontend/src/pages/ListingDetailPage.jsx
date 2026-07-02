@@ -18,7 +18,7 @@ function ListingDetailPage() {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/listings/${id}`)
+        const response = await axios.get(`https://airbnb-clone-cre0.onrender.com/api/listings/${id}`)
         setListing(response.data)
       } catch (err) {
         setError('Listing not found')

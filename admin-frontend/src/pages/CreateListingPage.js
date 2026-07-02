@@ -58,7 +58,7 @@ function CreateListingPage() {
         occupancyTaxes: Number(formData.occupancyTaxes) || 0,
       };
 
-      await axios.post('http://localhost:5000/api/listings', payload, {
+      await axios.post('https://airbnb-clone-cre0.onrender.com/api/listings', payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

@@ -18,7 +18,7 @@ function DashboardPage({ onLogout }) {
 
   const fetchListings = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/listings');
+      const response = await axios.get('https://airbnb-clone-cre0.onrender.com/api/listings');
       setListings(response.data);
     } catch (err) {
       setError('Failed to load listings');
@@ -30,7 +30,7 @@ function DashboardPage({ onLogout }) {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this listing?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/listings/${id}`, {
+      await axios.delete(`https://airbnb-clone-cre0.onrender.com/api/listings/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       // Remove deleted listing from state without refetching

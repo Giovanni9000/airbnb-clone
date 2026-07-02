@@ -21,7 +21,7 @@ function LoginPage({ onLogin }) {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://airbnb-clone-cre0.onrender.com/api/auth/login', {
         email,
         password,
       });

@@ -32,7 +32,7 @@ function UpdateListingPage() {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/listings/${id}`);
+        const response = await axios.get(`https://airbnb-clone-cre0.onrender.com/api/listings/${id}`);
         const listing = response.data;
 
         // Pre-fill the form with existing data
@@ -92,7 +92,7 @@ function UpdateListingPage() {
         occupancyTaxes: Number(formData.occupancyTaxes) || 0,
       };
 
-      await axios.put(`http://localhost:5000/api/listings/${id}`, payload, {
+      await axios.put(`https://airbnb-clone-cre0.onrender.com/api/listings/${id}`, payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
